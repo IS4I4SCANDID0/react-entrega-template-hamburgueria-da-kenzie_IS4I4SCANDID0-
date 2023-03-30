@@ -1,8 +1,8 @@
 export function SearchComponent() {
   return (
-    <div>
-      <input type="text" />
+    <form>
+      <input type="text" placeholder="Digitar pesquisa" />
       <button>Pesquisar</button>
-    </div>
+    </form>
   );
 }

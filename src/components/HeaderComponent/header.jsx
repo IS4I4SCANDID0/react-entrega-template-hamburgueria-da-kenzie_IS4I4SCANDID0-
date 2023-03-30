@@ -1,4 +1,4 @@
-import logo from './../../assets/Burguer Kenzie.jpg';
+import logo from './../../assets/logo-kenzie-burger.svg';
 import { SearchComponent } from './searchComponent';
 
 export function Header() {

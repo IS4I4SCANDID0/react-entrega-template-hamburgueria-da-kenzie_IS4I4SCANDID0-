@@ -1,4 +1,4 @@
-export function ProductList({ showProducts }) {
+export function ProductList({ showProducts, addToSnackCart }) {
   return (
     <ul>
       {showProducts.map((product) => (
@@ -6,10 +6,10 @@ export function ProductList({ showProducts }) {
           <img src={product.img} alt={product.name} />
           <h2>{product.name}</h2>
           <p>{product.category}</p>
-          <span>R$ {product.price}</span>
+          <span>R$ {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+          <button onClick={() => addToSnackCart(product)}>Adicionar</button>
         </li>
       ))}
     </ul>
   );
 }
-// *** NORMALIZAR OS NÚMEROS COM MÉTODOS PARA TROCAR OS PONTOS POR VÍRGULA *** //

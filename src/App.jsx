@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Header } from './components/HeaderComponent/header';
 import { ProductList } from './components/ProductList/productList';
-import { CartList } from './components/CartList/cartList';
+import { CartList } from './components/CartList/bagList';
 import { api } from './services/api';
 
 function App() {

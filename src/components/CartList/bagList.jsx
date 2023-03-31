@@ -1,3 +1,5 @@
+import { BagListSum } from './bagListSum';
+
 export function CartList({ cartSnackList, removeFromSnackCart }) {
   return (
     <section>
@@ -19,6 +21,8 @@ export function CartList({ cartSnackList, removeFromSnackCart }) {
           <span>Adicione itens</span>
         </>
       )}
+      <BagListSum /> // *** FAZER O REDUCE NO APP.JSX E RENDERIZAR AQUI*** //
     </section>
   );
 }
+// *** RENDERIZAR O COMPONENTE DA SOMA DOS VALORES *** //

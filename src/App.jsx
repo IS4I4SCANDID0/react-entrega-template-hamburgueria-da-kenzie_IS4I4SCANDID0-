@@ -17,7 +17,7 @@ function App() {
     currentSnack.name.trim().toLowerCase().includes(search.toLowerCase()) ||
     currentSnack.category.toLowerCase().includes(search.toLowerCase())
   );
-  // console.log(currentSnack.category);
+  // console.log(currentSnack.category);// *** falta renderização condicional *** //
   // console.log(currentSnack.name);
   console.log(searchSnackResult);
 

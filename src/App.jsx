@@ -17,10 +17,8 @@ function App() {
     currentSnack.name.trim().toLowerCase().includes(search.toLowerCase()) ||
     currentSnack.category.toLowerCase().includes(search.toLowerCase())
   );
-  // console.log(currentSnack.category);// *** falta renderização condicional *** //
-  // console.log(currentSnack.name);
-  console.log(searchSnackResult);
-
+  // *** falta renderização condicional *** //
+  
   useEffect(() => {
     localStorage.setItem('@kenzieBurger-BagSnack', JSON.stringify(cartSnackList));
   }, [cartSnackList]);
@@ -65,7 +63,7 @@ function App() {
     <>
       <Header setSearch={setSearch} />
       <main>
-        <ProductList showProducts={showProducts} addToSnackCart={addToSnackCart} />
+        <ProductList showProducts={showProducts} addToSnackCart={addToSnackCart} searchSnackResult={searchSnackResult}/>
         <CartList
           cartSnackList={cartSnackList}
           removeFromSnackCart={removeFromSnackCart}

@@ -1,13 +1,11 @@
-export function BagListSum() {
+export function BagListSum({ orderSnackFormatted, clearBagList }) {
   return (
-    <>
-      <section>
-        <div>
-          <h2>Total</h2>
-          <span>total vindo do app.jsx via prop</span>
-        </div>
-        <button>Remover todos</button>
-      </section>
-    </>
+    <div className="container__sumBag">
+      <div>
+        <h2>Total</h2>
+        <span>R$ {orderSnackFormatted}</span>
+      </div>
+      <button onClick={() => clearBagList()}>Remover todos</button>
+    </div>
   );
 }

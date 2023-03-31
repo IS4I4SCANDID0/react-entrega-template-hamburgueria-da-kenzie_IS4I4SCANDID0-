@@ -11,6 +11,16 @@ function App() {
 
   const [cartSnackList, setCartSnackList] = useState(snackLocalStorage ? JSON.parse(snackLocalStorage) : []);
 
+  const [search, setSearch] = useState('');
+
+  const searchSnackResult = showProducts.filter((currentSnack) =>
+    currentSnack.name.trim().toLowerCase().includes(search.toLowerCase()) ||
+    currentSnack.category.toLowerCase().includes(search.toLowerCase())
+  );
+  // console.log(currentSnack.category);
+  // console.log(currentSnack.name);
+  console.log(searchSnackResult);
+
   useEffect(() => {
     localStorage.setItem('@kenzieBurger-BagSnack', JSON.stringify(cartSnackList));
   }, [cartSnackList]);
@@ -41,12 +51,27 @@ function App() {
     setCartSnackList(productInCart);
   }
 
+  const totalOrderSnack = cartSnackList.reduce((acc, currentValue) => {
+    return acc + currentValue.price;
+  }, 0);
+
+  const orderSnackFormatted = totalOrderSnack.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+
+  function clearBagList() {
+    setCartSnackList([]);
+  }
+
   return (
     <>
-      <Header />
+      <Header setSearch={setSearch} />
       <main>
         <ProductList showProducts={showProducts} addToSnackCart={addToSnackCart} />
-        <CartList cartSnackList={cartSnackList} removeFromSnackCart={removeFromSnackCart} />
+        <CartList
+          cartSnackList={cartSnackList}
+          removeFromSnackCart={removeFromSnackCart}
+          orderSnackFormatted={orderSnackFormatted}
+          clearBagList={clearBagList}
+        />
       </main>
     </>
   );

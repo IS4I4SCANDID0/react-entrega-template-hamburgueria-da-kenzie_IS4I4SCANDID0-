@@ -1,8 +1,18 @@
-export function SearchComponent() {
+import { useState } from 'react';
+
+export function SearchComponent({ setSearch }) {
+  const [searchInput, setSearchInput] = useState('');
+
+  function submitSearch(event) {
+    event.preventDefault();
+    setSearch(searchInput);
+    setSearchInput('');
+  }
+
   return (
-    <form>
-      <input type="text" placeholder="Digitar pesquisa" />
-      <button>Pesquisar</button>
+    <form onSubmit={submitSearch}>
+      <input type="search" placeholder="Digitar pesquisa" value={searchInput} onChange={(event) => setSearchInput(event.target.value)} />
+      <button type="submit">Pesquisar</button>
     </form>
   );
 }

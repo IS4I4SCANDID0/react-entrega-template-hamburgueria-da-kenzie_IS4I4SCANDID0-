@@ -5,6 +5,7 @@ import { CartList } from './components/CartList/bagList';
 import { api } from './services/api';
 import { ResetCSS } from './styles/reset';
 import { GlobalStyles } from './styles/globalStyles';
+import { StyledMainContainer } from './styles/mainContainer';
 
 function App() {
   const snackLocalStorage = localStorage.getItem('@kenzieBurger-BagSnack');
@@ -65,7 +66,7 @@ function App() {
       <ResetCSS />
       <GlobalStyles />
       <Header setSearch={setSearch} />
-      <main>
+      <StyledMainContainer>
         <ProductList showProducts={showProducts} addToSnackCart={addToSnackCart} searchSnackResult={searchSnackResult}/>
         <CartList
           cartSnackList={cartSnackList}
@@ -73,7 +74,7 @@ function App() {
           orderSnackFormatted={orderSnackFormatted}
           clearBagList={clearBagList}
         />
-      </main>
+      </StyledMainContainer>
     </>
   );
 }

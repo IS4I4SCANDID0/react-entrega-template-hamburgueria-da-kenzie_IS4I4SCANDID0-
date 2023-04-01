@@ -1,16 +1,21 @@
+import { StyledBagSection } from '../../styles/bagList';
 import { BagListSum } from './bagListSum';
 
 export function CartList({ cartSnackList, removeFromSnackCart, orderSnackFormatted, clearBagList }) {
   return (
-    <section>
+    <StyledBagSection>
       <h3>Sacola de Compras</h3>
       {cartSnackList.length > 0 ? (
         <ul>
           {cartSnackList.map((snack) => (
             <li key={snack.id}>
-              <img src={snack.img} alt={snack.name} />
-              <h2>{snack.name}</h2>
-              <p>{snack.category}</p>
+              <div className='imgContainer'>
+                <img src={snack.img} alt={snack.name} />
+              </div>
+              <div>
+                <h2>{snack.name}</h2>
+                <p>{snack.category}</p>
+              </div>
               <button onClick={() => removeFromSnackCart(snack.id)}>Remover</button>
             </li>
           ))}
@@ -22,6 +27,6 @@ export function CartList({ cartSnackList, removeFromSnackCart, orderSnackFormatt
         </>
       )}
       <BagListSum orderSnackFormatted={orderSnackFormatted} clearBagList={clearBagList} />
-    </section>
+    </StyledBagSection>
   );
 }

@@ -16,4 +16,9 @@ export const GlobalStyles = createGlobalStyle `
     --radius-card: 0.3125rem;
     --font-default: 'Inter', sans-serif;
   }
+
+  body {
+    background-color: var(--white-fixed);
+    font-family: var(--font-default);
+  }
 `

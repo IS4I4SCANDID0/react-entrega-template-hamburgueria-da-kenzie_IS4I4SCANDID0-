@@ -3,6 +3,8 @@ import { Header } from './components/HeaderComponent/header';
 import { ProductList } from './components/ProductList/productList';
 import { CartList } from './components/CartList/bagList';
 import { api } from './services/api';
+import { ResetCSS } from './styles/reset';
+import { GlobalStyles } from './styles/globalStyles';
 
 function App() {
   const snackLocalStorage = localStorage.getItem('@kenzieBurger-BagSnack');
@@ -17,7 +19,6 @@ function App() {
     currentSnack.name.trim().toLowerCase().includes(search.toLowerCase()) ||
     currentSnack.category.toLowerCase().includes(search.toLowerCase())
   );
-  // *** falta renderização condicional *** //
   
   useEffect(() => {
     localStorage.setItem('@kenzieBurger-BagSnack', JSON.stringify(cartSnackList));
@@ -61,6 +62,8 @@ function App() {
 
   return (
     <>
+      <ResetCSS />
+      <GlobalStyles />
       <Header setSearch={setSearch} />
       <main>
         <ProductList showProducts={showProducts} addToSnackCart={addToSnackCart} searchSnackResult={searchSnackResult}/>

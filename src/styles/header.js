@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const StyledHeader = styled.header `
+export const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
+  height: 135px;
   gap: 1rem;
   padding: 1rem;
   background-color: var(--grey-0);
@@ -51,4 +52,20 @@ export const StyledHeader = styled.header `
       color: var(--white-fixed);
     }
   }
+  
+  @media(min-width: 769px) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+
+    img{
+      margin-left: 3rem;
+    }
+
+    form {
+      margin-right: 6.2rem;
+    }
+  }
+
 `
+

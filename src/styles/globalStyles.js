@@ -21,4 +21,14 @@ export const GlobalStyles = createGlobalStyle `
     background-color: var(--white-fixed);
     font-family: var(--font-default);
   }
+
+  body::-webkit-scrollbar{
+    background-color: var(--white-fixed);
+    width: 14px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    width: 14px;
+  }
 `

@@ -44,14 +44,14 @@ export const StyledListProduct = styled.ul `
       font-size: 0.75rem;
       font-weight: 400;
       color: var(--grey-50);
-      padding: 0 0 1rem 1rem;
+      padding: 0 0 0.5rem 1rem;
     }
 
     span {
       font-size: 1rem;
       font-weight: 600;
       color: var(--color-primary);
-      padding: 0 0 1rem 1rem;
+      padding: 0 0 0.5rem 1rem;
     }
 
     button {
@@ -59,9 +59,19 @@ export const StyledListProduct = styled.ul `
       font-size: 0.875rem;
       font-weight: 600;
       color: var(--white-fixed);
-      margin: 0 0 1.5rem 1rem;
+      margin: 0 0 1rem 1rem;
       padding: 0.5rem 1.5rem;
       border-radius: var(--radius-default);
     }
+  }
+
+  @media(min-width: 769px) {
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 1rem 0 0 3.8rem;
+    /* margin-left: 3rem; */
+
+    /* background-color: blue; */
   }
 ` 

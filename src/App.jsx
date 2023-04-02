@@ -6,6 +6,7 @@ import { api } from './services/api';
 import { ResetCSS } from './styles/reset';
 import { GlobalStyles } from './styles/globalStyles';
 import { StyledMainContainer } from './styles/mainContainer';
+import { toast } from 'react-toastify';
 
 function App() {
   const snackLocalStorage = localStorage.getItem('@kenzieBurger-BagSnack');
@@ -40,9 +41,11 @@ function App() {
   function addToSnackCart(product) {
     if (!cartSnackList.some((snack) => snack.id === product.id)) {
       const productInCart = [...cartSnackList, product];
+      
       setCartSnackList(productInCart);
+      toast.success('Produto adicionado a sacola com sucesso')
     } else {
-      console.log('O produto já está no carrinho'); // *** COLOCAR TOAST NO LUGAR DO CONSOLE *** //
+      toast.error('O produto já está na sacola'); // *** COLOCAR TOAST NO LUGAR DO CONSOLE *** //
     }
   }
 

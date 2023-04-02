@@ -5,8 +5,10 @@ import { SearchComponent } from './searchComponent';
 export function Header({ setSearch }) {
   return (
     <StyledHeader>
-      <img src={logo} alt="Logo Kenzie Burger" />
-      <SearchComponent setSearch={setSearch} />
+      <div>
+        <img src={logo} alt="Logo Kenzie Burger" />
+        <SearchComponent setSearch={setSearch} />
+      </div>
     </StyledHeader>
   );
 }

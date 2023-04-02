@@ -29,7 +29,7 @@ export const StyledBagSection = styled.section`
     align-self: center;
     gap: 1.5rem;
     padding: 1rem 0;
-    border-bottom: solid 2px var(--grey-20);
+    border-bottom: solid 3px var(--grey-20);
     overflow-y: scroll;
   }
 
@@ -137,17 +137,18 @@ export const StyledBagSection = styled.section`
   }  
 
   ul {
-    padding-right: 1rem;
+    padding: 1rem;
+    width: 100%;
   }
 
   ul::-webkit-scrollbar {
     background-color: var(--grey-0);
-    width: 7px;
+    width: 10px;
   }
 
   ul::-webkit-scrollbar-thumb {
     background-color: var(--color-primary);
-    width: 7px;
+    width: 10px;
   }
 
   .emptyMessage {

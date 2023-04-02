@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  display: flex;
-  flex-direction: column;
-  height: 135px;
-  gap: 1rem;
   padding: 1rem;
   background-color: var(--grey-0);
+
+  div {
+    display: flex;
+    flex-direction: column;
+    height: 135px;
+    gap: 1rem;
+    width: 100%;
+  }
 
   img{
     width: 158px;
@@ -20,7 +24,7 @@ export const StyledHeader = styled.header`
     align-self: center;
     padding: 0.5rem;
     border: solid 1.5px var(--grey-20);
-    width: 325px;
+    width: 290px;
     height: 55px;
     border-radius: var(--radius-default);
     background-color: var(--white-fixed);
@@ -54,16 +58,26 @@ export const StyledHeader = styled.header`
   }
   
   @media(min-width: 769px) {
-    flex-direction: row;
-    justify-content: space-between;
-    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+
+    div {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 90%;
+      height: 75px;
+      margin-right: 3.5rem;
+    }
 
     img{
-      margin-left: 3rem;
+      /* margin-left: 3rem; */
     }
 
     form {
-      margin-right: 6.2rem;
+      width: 300px;
     }
   }
 

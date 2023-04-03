@@ -12,6 +12,7 @@ export const StyledListProduct = styled.ul `
     justify-content: center;
     align-items: flex-start;
     min-width: 300px;
+    min-height: 310px;
     border: solid 2px var(--grey-20);
     border-radius: var(--radius-card);
 
@@ -22,13 +23,15 @@ export const StyledListProduct = styled.ul `
       justify-content: center;
       background-color: var(--grey-0);
       width: 100%;
+      height: 153px;
       border-top-left-radius: var(--radius-card);
       border-top-right-radius: var(--radius-card);
     }
 
     img{
-      width: 175px;
-      height: 175px;
+      max-width: 175px;
+      max-height: 175px;
+      /* background-position: top; */
       align-self: center;
       object-fit: cover;
     }
@@ -68,10 +71,20 @@ export const StyledListProduct = styled.ul `
   @media(min-width: 769px) {
     overflow-x: hidden;
     flex-wrap: wrap;
-    width: 70%;
-    padding: 1rem 0 0 3.8rem;
-    /* margin-left: 3rem; */
+    max-width: 75%;
+    
+    max-height: 70%;
+    
+    li {
+      min-width: 290px;
+      /* height: 35%; */
 
-    /* background-color: blue; */
+
+      div {
+        height: 122px;
+      }
+    }
+  
   }
+
 ` 

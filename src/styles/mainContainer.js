@@ -7,6 +7,7 @@ export const StyledMainContainer = styled.main `
   
   @media(min-width: 769px) {
     flex-direction: row;
+    padding: 2rem;
   
     .buttonAdd:hover {
       background-color: var(--color-primary-50);

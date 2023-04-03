@@ -62,26 +62,33 @@ export const StyledHeader = styled.header`
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 82px;
 
 
     div {
+      display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 91%;
-      height: 75px;
-      gap: 3rem;
-      margin-right: 2rem;
-    }
+      width: 97%;
+      height: 100%;
 
-
-    form {
-      width: 325px;
       
-      button:hover {
-        background-color: var(--color-primary-50);
-        transition: 1s ease;
+      img {
+        margin-left: 1rem;
+      }
+
+      form {
+        align-self: flex-end;
+
+        button:hover {
+         background-color: var(--color-primary-50);
+          transition: 1s ease;
+        }
       }
     }
+
+
+   
   }
 
 `

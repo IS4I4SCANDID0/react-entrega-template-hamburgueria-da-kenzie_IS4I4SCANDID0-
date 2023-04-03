@@ -116,7 +116,7 @@ export const StyledBagSection = styled.section`
     padding: 1rem;
     text-align: center;
     width: 100%;
-    /* height: 150px; */
+    margin: 0;
 
     h4 {
       font-size: 1.25rem;

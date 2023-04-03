@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import { StyledBagSection } from '../../styles/bagList';
 import { BagListSum } from './bagListSum';
 

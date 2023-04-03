@@ -67,17 +67,20 @@ export const StyledHeader = styled.header`
     div {
       flex-direction: row;
       justify-content: space-between;
-      width: 90%;
+      width: 91%;
       height: 75px;
-      margin-right: 3.5rem;
+      gap: 3rem;
+      margin-right: 2rem;
     }
 
-    img{
-      /* margin-left: 3rem; */
-    }
 
     form {
-      width: 300px;
+      width: 325px;
+      
+      button:hover {
+        background-color: var(--color-primary-50);
+        transition: 1s ease;
+      }
     }
   }
 

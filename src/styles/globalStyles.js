@@ -20,6 +20,7 @@ export const GlobalStyles = createGlobalStyle `
   body {
     background-color: var(--white-fixed);
     font-family: var(--font-default);
+    cursor: default;
   }
 
   body::-webkit-scrollbar{

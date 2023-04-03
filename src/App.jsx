@@ -6,7 +6,8 @@ import { api } from './services/api';
 import { ResetCSS } from './styles/reset';
 import { GlobalStyles } from './styles/globalStyles';
 import { StyledMainContainer } from './styles/mainContainer';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css'
 
 function App() {
   const snackLocalStorage = localStorage.getItem('@kenzieBurger-BagSnack');
@@ -45,13 +46,14 @@ function App() {
       setCartSnackList(productInCart);
       toast.success('Produto adicionado a sacola com sucesso')
     } else {
-      toast.error('O produto já está na sacola'); // *** COLOCAR TOAST NO LUGAR DO CONSOLE *** //
+      toast.error('O produto já está na sacola'); 
     }
   }
 
   function removeFromSnackCart(snackId) {
     const productInCart = cartSnackList.filter((snack) => snack.id !== snackId);
     setCartSnackList(productInCart);
+    toast.info('Você excluiu um produto da sua sacola')
   }
 
   const totalOrderSnack = cartSnackList.reduce((acc, currentValue) => {
@@ -62,6 +64,7 @@ function App() {
 
   function clearBagList() {
     setCartSnackList([]);
+    toast.info('Você excluiu todos os seus produtos da sua sacola ')
   }
 
   return (
@@ -78,6 +81,7 @@ function App() {
           clearBagList={clearBagList}
         />
       </StyledMainContainer>
+      <ToastContainer theme='colored' position='bottom-right'/>
     </>
   );
 }

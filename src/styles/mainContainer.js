@@ -7,5 +7,10 @@ export const StyledMainContainer = styled.main `
   
   @media(min-width: 769px) {
     flex-direction: row;
+  
+    .buttonAdd:hover {
+      background-color: var(--color-primary-50);
+      transition: 1s ease;
+    }
   }
 `

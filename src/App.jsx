@@ -44,7 +44,7 @@ function App() {
       const productInCart = [...cartSnackList, product];
       
       setCartSnackList(productInCart);
-      toast.success('Produto adicionado a sacola com sucesso')
+      toast.success('O produto adicionado a sacola')
     } else {
       toast.error('O produto já está na sacola'); 
     }
@@ -64,7 +64,7 @@ function App() {
 
   function clearBagList() {
     setCartSnackList([]);
-    toast.info('Você excluiu todos os seus produtos da sua sacola ')
+    toast.info('Você excluiu todos os produtos da sua sacola ')
   }
 
   return (
@@ -81,7 +81,7 @@ function App() {
           clearBagList={clearBagList}
         />
       </StyledMainContainer>
-      <ToastContainer theme='colored' position='bottom-right'/>
+      <ToastContainer theme='colored' position='bottom-right' autoClose='2500'/>
     </>
   );
 }

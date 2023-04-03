@@ -5,6 +5,7 @@ export function ProductList({ showProducts, addToSnackCart, search, searchSnackR
 
   return (
     <StyledListProduct>
+      {/* <h2>{search !== '' ? `Resultados para ${search}` : null}</h2> */}
       {currentResult.map((product) => (
         <li key={product.id}>
           <div>

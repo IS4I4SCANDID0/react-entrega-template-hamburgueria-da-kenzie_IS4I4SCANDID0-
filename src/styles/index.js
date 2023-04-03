@@ -31,7 +31,6 @@ export const StyledListProduct = styled.ul `
     img{
       max-width: 175px;
       max-height: 175px;
-      /* background-position: top; */
       align-self: center;
       object-fit: cover;
     }
@@ -72,17 +71,10 @@ export const StyledListProduct = styled.ul `
     overflow-x: hidden;
     flex-wrap: wrap;
     max-width: 75%;
-    
     max-height: 70%;
     
     li {
       min-width: 290px;
-      /* height: 35%; */
-
-
-      div {
-        height: 122px;
-      }
     }
   
   }

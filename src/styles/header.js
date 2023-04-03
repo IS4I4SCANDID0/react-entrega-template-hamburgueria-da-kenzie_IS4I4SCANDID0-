@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   padding: 1rem;
+  width: 100%;
   background-color: var(--grey-0);
 
   div {

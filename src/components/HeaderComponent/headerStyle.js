@@ -80,6 +80,7 @@ export const StyledHeader = styled.header`
 
       form {
         align-self: flex-end;
+        min-width: 25%;
 
         button:hover {
          background-color: var(--color-primary-50);
@@ -87,10 +88,10 @@ export const StyledHeader = styled.header`
         }
       }
     }
-
-
-   
   }
 
 `
+
+
+   
 

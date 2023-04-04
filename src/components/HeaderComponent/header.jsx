@@ -1,4 +1,4 @@
-import { StyledHeader } from '../../styles/header';
+import { StyledHeader } from './headerStyle';
 import logo from './../../assets/logo-kenzie-burger.svg';
 import { SearchComponent } from './searchComponent';
 

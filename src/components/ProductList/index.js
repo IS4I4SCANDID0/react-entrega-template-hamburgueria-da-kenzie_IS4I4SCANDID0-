@@ -70,8 +70,22 @@ export const StyledListProduct = styled.ul `
   @media(min-width: 769px) {
     overflow-x: hidden;
     flex-wrap: wrap;
-    max-width: 75%;
-    max-height: 70%;
+    min-width: 70%;
+    min-height: 70%;
+
+    .resultsContainer {
+      border: solid 1px blue;
+      display: flex;
+      width: 88%;
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--grey-100);
+      }
+
+
+    }
     
     li {
       min-width: 290px;

@@ -1,5 +1,4 @@
-import { toast } from 'react-toastify';
-import { StyledBagSection } from '../../styles/bagList';
+import { StyledBagSection } from './bagListStyle';
 import { BagListSum } from './bagListSum';
 
 export function CartList({ cartSnackList, removeFromSnackCart, orderSnackFormatted, clearBagList }) {

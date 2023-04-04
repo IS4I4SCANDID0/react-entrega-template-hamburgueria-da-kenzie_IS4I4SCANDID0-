@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledBagSection = styled.section`
-  width: 320px;
+  width: 90%;
   max-height: 470px;
   display: flex;
   flex-direction: column;
@@ -132,8 +132,9 @@ export const StyledBagSection = styled.section`
 
   @media(min-width: 769px) {
     align-self: flex-start;
-    width: 320px;
-    margin-top: 1rem;
+    max-width: 25%;
+    min-width: 300px;
+    margin: 1rem 0 0 0;
   }  
 
   ul {
